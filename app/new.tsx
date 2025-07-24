@@ -42,7 +42,7 @@ export default function NewScreen() {
     }
 
     addPlant(name, Number(days), imageUri);
-    router.navigate("/");
+    router.replace("/");
   };
 
   const handleChooseImage = async () => {
@@ -51,7 +51,7 @@ export default function NewScreen() {
     }
 
     const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      mediaTypes: ["images"],
       allowsEditing: true,
       aspect: [1, 1],
       quality: 1,
